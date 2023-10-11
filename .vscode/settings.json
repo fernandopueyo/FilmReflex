@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "C:/Users/User/anaconda3/envs/FastAPI/python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": false
+}

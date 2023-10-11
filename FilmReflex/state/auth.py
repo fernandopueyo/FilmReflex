@@ -26,7 +26,7 @@ class AuthState(State):
             self.token = login_response.json()["access_token"]
             self.logged = True
             self.is_registered = False
-            return rx.redirect("/home")
+            return rx.redirect("/")
     
     def signup(self):
         if self.password != self.confirm_password:

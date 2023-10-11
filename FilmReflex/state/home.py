@@ -9,8 +9,11 @@ class HomeState(State):
     films_list: list[Film]
     looking_database: bool = False
     first_search = True
-    format_link = "http://localhost:3000/film/{}"
+    format_link = "/film/{}"
     films_link: list[str]
+
+    def clear_search(self):
+        self.first_search = True
 
     def set_text(self, text: str):
         self.text = requests.get(f"http://16.170.146.0:10000/films/name/{text}").text
@@ -23,7 +26,6 @@ class HomeState(State):
         self.looking_database = False
         self.films_list = [Film(**film) for film in self.films_schema(films_list_db)]
         self.films_link = [self.get_film_link(film.id) for film in self.films_list]
-
 
     def film_schema(self, film) -> dict:
         return {

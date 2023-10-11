@@ -14,7 +14,7 @@ def profile():
             top="0px",
             left="0px"
             ),
-            href="http://localhost:3000/home/"
+            href="/"
         ),
         rx.cond(
             State.user_login,
