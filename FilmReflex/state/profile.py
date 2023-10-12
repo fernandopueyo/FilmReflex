@@ -8,7 +8,7 @@ class ProfileState(State):
     full_name: str
     rates_list: list[Rate]
     show_right: bool = False
-    format_link = "http://localhost:3000/film/{}"
+    format_link = "/film/{}"
     films_link: list[str]
 
     def get_user(self):
